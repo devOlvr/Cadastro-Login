@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro e Login</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sync_alt"
+    />
+  </head>
+  <body>
+    <main class="main-cadastro-login">
+      <section class="section-cadastro" style="display: block">
+        <form class="form-cadastro">
+          <div class="form-title">
+            <h1 class="title">Cadastro de Usuário</h1>
+          </div>
+          <div class="inputs">
+            <label>Nome de Usuário:</label>
+            <input type="text" placeholder="Exemplo" id="username" required />
+            <label>Número de Telefone:</label>
+            <input
+              type="tel"
+              placeholder="(99) 99999-9999"
+              id="phone"
+              maxlength="15"
+              oninput="maskFormation('phoneNumber')"
+              required
+            />
+            <label>Email:</label>
+            <input
+              type="email"
+              placeholder="exemplo@exemplo.com"
+              class="email"
+              required
+            />
+            <label>Senha:</label>
+            <input
+              type="password"
+              placeholder="******"
+              class="password"
+              required
+            />
+          </div>
+          <div class="buttonsCad">
+            <button class="btn-confirm" onclick="handleConfirmRegister()">
+              Confirmar
+            </button>
+            <button class="btn-cancel">Cancelar</button>
+            <a href="#" onclick="handleChangeForm()">Já possui cadastro?</a>
+          </div>
+        </form>
+      </section>
+
+      <section class="section-login" style="display: none">
+        <form class="form-login">
+          <div class="form-title">
+            <h1 class="title">Login de Usuário</h1>
+          </div>
+          <div class="inputs">
+            <label>Email:</label>
+            <input
+              type="text"
+              placeholder="exemplo@exemplo.com"
+              class="email"
+            />
+            <label>Senha:</label>
+            <input type="text" placeholder="******" class="senha" />
+          </div>
+          <div class="buttonsLog">
+            <button
+              class="btn-confirm"
+              type="submit"
+              onclick="handleLogAccount()"
+            >
+              Confirmar
+            </button>
+            <button class="btn-cancel" type="submit">Cancelar</button>
+            <a href="#" onclick="handleChangeForm()">Ainda não cadastrou?</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
