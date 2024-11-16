@@ -1,7 +1,8 @@
 # Projeto Cadastro-Login
 
 ### Esse projeto foi construído com fins educacionais, foi feito um Cadastro salvo em nuvem no LocalStorage, o qual não é adequado, o mais adequado seria guardar essas informações em um banco de dados, porém no momento estou focando no Front-End.
-
+<br/>
+<br/>
 
 ### As Tecnologia utilizadas foram: 
 
